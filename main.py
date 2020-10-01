@@ -1,4 +1,4 @@
-import discord,getpass,os
+import discord,os
 from colorama import init,Fore,Style
 from glob import glob
 init(convert=True)
@@ -134,6 +134,5 @@ async def on_connect():
             print('Done.')
 
 
-#token=getpass.getpass("Enter User Token (right click to paste): ")
-token='NjEzMzQ0MjQ3NTU0MjQ0NjEw.X3YYZA.QvNeUdQ42vr-XRFKqeJRdTnWSag'
+token=input("Enter User Token: ")
 client.run(token,bot=False)
