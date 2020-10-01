@@ -1,4 +1,4 @@
-import discord,os
+import discord,getpass,os
 from colorama import init,Fore,Style
 from glob import glob
 init(convert=True)
@@ -99,7 +99,7 @@ async def on_connect():
                         for line in lines:
                             b=line.split()
                             if not len(b)==0:
-                                b=''.join(b)
+                                b=' '.join(b)
                                 if z in b:
                                     f.write('list by catnip - '+b+'\n')
                             line_num=line_num+1
@@ -113,7 +113,7 @@ async def on_connect():
                         for line in lines:
                             b=line.split()
                             if not len(b)==0:
-                                b=''.join(b)
+                                b=' '.join(b)
                                 if z in b:
                                     f.write('list by catnip - '+b+'\n')
                             line_num=line_num+1
@@ -127,12 +127,13 @@ async def on_connect():
                         for line in lines:
                             b=line.split()
                             if not len(b)==0:
-                                b=''.join(b)
+                                b=' '.join(b)
                                 if z in b:
                                     f.write('list by catnip - '+b+'\n')
                             line_num=line_num+1
             print('Done.')
 
 
-token=input("Enter User Token: ")
+#token=getpass.getpass("Enter User Token (right click to paste): ")
+token='NjEzMzQ0MjQ3NTU0MjQ0NjEw.X3YYZA.QvNeUdQ42vr-XRFKqeJRdTnWSag'
 client.run(token,bot=False)
