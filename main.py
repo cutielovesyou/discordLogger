@@ -134,5 +134,5 @@ async def on_connect():
             print('Done.')
 
 
-token=input("Enter User Token (right click to paste): ")
+token=input("Enter User Token: ")
 client.run(token,bot=False)
